@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { API_CONFIG } from '../../config/api.config';
 import { CategoriaDTO } from '../../models/categoria.dto';
 import { CategoriaService } from '../../services/domain/categoria.service';
+import { ProdutosPage } from '../produtos/produtos';
 
 /**
  * Generated class for the CategoriasPage page.
@@ -34,6 +35,10 @@ export class CategoriasPage {
         this.items = Response;
       },
       error => {}); 
+  }
+
+  showProdutos() {
+    this.navCtrl.push('ProdutosPage');
   }
 
 }
